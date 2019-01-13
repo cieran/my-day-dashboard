@@ -16,14 +16,13 @@ export default class Tile extends Component {
     }
 
     getRandomPhoto() {
-        unsplash.photos.getRandomPhoto({ featured: false })
+        unsplash.photos.listPhotos(1, 5, "popular")
             .then(toJson)
             .then(data => {
-                console.log()
-                this.setState({ imgs: data.urls.full })
+                this.setState({ imgs: data })
             })
             .catch(err => {
-                console.log('error occurred during unsplash fetch', err)
+                console.log('error occurred during unsplash api GET', err)
             })
     }
 
@@ -37,10 +36,6 @@ export default class Tile extends Component {
         )
     }
 }
-/*
-const data = axios.get('https://jsonplaceholder.typicode.com/todos/1')
-    .then(response => console.log(response))
-*/
 
 const unsplash = new Unsplash({
     applicationId: process.env.REACT_APP_UNSPLASH_ACCESS_KEY,
