@@ -1,12 +1,13 @@
 import React, { Component } from 'react'
 import Unsplash, { toJson } from 'unsplash-js'
+import ImageGallery from './ImageGallery';
 
 
-export default class Tile extends Component {
+export default class UnsplashTile extends Component {
     constructor() {
         super();
         this.state = {
-            imgs: '',
+            imgs: [],
             loadingState: true
         };
     }
@@ -28,9 +29,10 @@ export default class Tile extends Component {
 
     render() {
         return (
-            <div>
-                <div className="main-content">
-                    <img src={this.state.imgs} />
+            <div className="uk-child-width-1-1@s uk-grid-match uk-padding" uk-grid>
+                <div className="uk-card uk-card-default uk-card-hover uk-card-body">
+                    <h3 className="uk-card-title">Creative Inspiration</h3>
+                    <ImageGallery data={this.state.imgs} />
                 </div>
             </div>
         )

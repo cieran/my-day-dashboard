@@ -3,23 +3,11 @@ body{
     padding: 0;
 }
 
-.appName {
-    float: left;
-}
-
-.nav-right{
-    display: inline-block;
-}
-
 .avatar{
-    margin: 1em;
-    border-radius: 50%;
     width: 48px;
+    border-radius: 50%;
 }
 
-.navbar{
-    width: 100%;
-    overflow: auto;
-    color:#333;
-    border-bottom: 1px solid white;
+nav{
+    padding: 10px;
 }

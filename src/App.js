@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import './App.css';
 import NavBar from './layout/NavBar';
-import Tile from './components/Tile';
+import Dashboard from './layout/Dashboard';
 
 class App extends Component {
   render() {
     return (
       <React.Fragment>
         <NavBar />
-        <Tile />
+        <Dashboard />
       </React.Fragment>
     );
   }

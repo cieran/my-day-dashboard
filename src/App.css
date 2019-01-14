@@ -1,0 +1,30 @@
+.img-wrap {
+    background-color: #fff;
+    margin-bottom: .8em;
+    position: relative;
+  }
+  
+  .img-wrap img {
+    min-width: 100%;
+  }
+
+  @media (min-width: 550px) {
+    .img-list li {
+      float: left;
+      width: 50%;
+      margin: 0;
+    }
+    .img-wrap img {
+      height: 235px;
+    }
+    .img-list .no-imgs {
+      float: none;
+      width: 100%;
+    }
+    .img-wrap {
+      border: 1px solid white;
+      padding: 0;
+      overflow: hidden;
+      font-size: 0;
+    }
+  }
