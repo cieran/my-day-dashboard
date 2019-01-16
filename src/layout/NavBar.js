@@ -8,11 +8,11 @@ export default function NavBar() {
 
     return (
         <React.Fragment>
-            <nav className="uk-light uk-background-secondary" uk-navbar="boundary-align: true; align: center;">
+            <nav className="navbar-app uk-background-secondary" uk-navbar="boundary-align: true; align: center;">
                 <div className="uk-navbar-left">
                     <ul className="uk-navbar-nav">
                         <li>
-                            <a href="https://github.com/cieran/my-day-dashboard" target="_blank">MY DAY DASHBOARD</a>
+                            <a href="https://github.com/cieran/my-day-dashboard" target="_blank">My Day Dashboard</a>
                         </li>
                     </ul>
                 </div>

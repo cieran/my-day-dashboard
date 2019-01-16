@@ -17,7 +17,7 @@ export default class UnsplashTile extends Component {
     }
 
     getRandomPhoto() {
-        unsplash.photos.listPhotos(1, 5, "popular")
+        unsplash.photos.listPhotos(1, 10, "latest")
             .then(toJson)
             .then(data => {
                 this.setState({ imgs: data })
@@ -31,7 +31,7 @@ export default class UnsplashTile extends Component {
         return (
             <div className="uk-child-width-1-1@s uk-grid-match uk-padding" uk-grid>
                 <div className="uk-card uk-card-default uk-card-hover uk-card-body">
-                    <h3 className="uk-card-title">Creative Inspiration</h3>
+                    <h3 className="uk-card-title">Creative Inspo via Unsplash API</h3>
                     <ImageGallery data={this.state.imgs} />
                 </div>
             </div>

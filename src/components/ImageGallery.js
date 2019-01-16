@@ -5,11 +5,11 @@ const ImageGallery = props => {
 
     const data = props.data
     const images = data.map(
-        img => <Image key={img.id} src={img.urls.small} />
+        img => <Image key={img.id} description={img.description} username={img.user.username} likes={img.likes} portfolio={img.user.portfolio_url} src={img.urls.full} />
     )
 
     return (
-        <div>
+        <div className='uk-grid' style={{ margin: '0 auto' }}>
             {images}
         </div >
     )
